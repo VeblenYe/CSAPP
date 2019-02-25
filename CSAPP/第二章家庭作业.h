@@ -29,7 +29,7 @@ int sra(int x, int k) {
 // 思路：x的四个字节为1010循环
 int any_odd_one(unsigned x) {
 	// 技巧：两个!运算符将结果转为1或0
-	return !(!(x & 0xAAAAAAAA));
+	return x == (x & 0xAAAAAAAA);
 }
 
 
@@ -130,7 +130,7 @@ int saturating_add(int x, int y) {
 	int sum = x + y;
 
 	// 如果溢出，overflow为111...11，否则000...00
-	int overflow = ((x ^ sum) &(y ^ sum)) >> (w - 1);
+	int overflow = ((x ^ sum) & (y ^ sum)) >> (w - 1);
 
 	// 如果x为正，sign为000...000，否则111...11
 	int sign = x >> (w - 1);
@@ -328,6 +328,7 @@ float_bits float_half(float_bits f) {
 		frac >>= 1;
 	else if (exp == 0x1) {
 		--exp;
+		// 补偿规格化值隐含的1
 		frac = (frac >> 1) + 0x400000;
 	}
 	else if (exp < 0xff)
