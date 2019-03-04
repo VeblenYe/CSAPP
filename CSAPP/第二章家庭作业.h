@@ -397,7 +397,7 @@ float_bits float_i2f(int i) {
 	int firstRound = firstOne - 24;
 	if (firstRound >= 0) {
 		// 小数部分只有形如.XXXXY100...才实行向偶数舍入
-		if ((ic & ((1 << (firstRound + 1) - 1))) == (1 << firstRound)) {
+		if ((ic & (((1 << (firstRound + 1)) - 1))) == (1 << firstRound)) {
 			// 如果小数部分的最后一位为1，则进位
 			if ((frac & 0x1)) {
 				// 特殊情况，小数部分全为1
