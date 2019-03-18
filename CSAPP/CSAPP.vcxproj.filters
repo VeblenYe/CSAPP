@@ -26,5 +26,8 @@
     <ClInclude Include="第三章家庭作业.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="第四章家庭作业.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
