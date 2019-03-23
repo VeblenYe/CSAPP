@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSAPP", "CSAPP\CSAPP.vcxproj", "{040C3E7B-61EC-4A9A-A3E7-446C614C609E}"
 EndProject
@@ -9,6 +9,8 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		g|x64 = g|x64
+		g|x86 = g|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -17,6 +19,10 @@ Global
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Debug|x64.Build.0 = Debug|x64
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Debug|x86.ActiveCfg = Debug|Win32
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Debug|x86.Build.0 = Debug|Win32
+		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.g|x64.ActiveCfg = g|x64
+		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.g|x64.Build.0 = g|x64
+		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.g|x86.ActiveCfg = g|Win32
+		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.g|x86.Build.0 = g|Win32
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Release|x64.ActiveCfg = Release|x64
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Release|x64.Build.0 = Release|x64
 		{040C3E7B-61EC-4A9A-A3E7-446C614C609E}.Release|x86.ActiveCfg = Release|Win32
