@@ -13,10 +13,55 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\第八章作业">
+      <UniqueIdentifier>{e828c75f-7dae-4265-bcf2-50b1514dd289}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrent.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="explicit_wait_signal.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="kill_demo.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="myecho.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="myshell.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="mysystem.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="non_local_jump.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="restart.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="signal_demo.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="signal_handle.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="snooze.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="tfgets.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="waitpid_by_order.c">
+      <Filter>头文件\第八章作业</Filter>
+    </ClCompile>
+    <ClCompile Include="waitpid_random.c">
+      <Filter>头文件\第八章作业</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="第五章家庭作业.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myshell_job.h">
+      <Filter>头文件\第八章作业</Filter>
+    </ClInclude>
+    <ClInclude Include="myshell_sighandler.h">
+      <Filter>头文件\第八章作业</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

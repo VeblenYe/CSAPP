@@ -134,9 +134,25 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="concurrent.c" />
+    <ClCompile Include="explicit_wait_signal.c" />
+    <ClCompile Include="kill_demo.c" />
+    <ClCompile Include="myecho.c" />
+    <ClCompile Include="myshell.c" />
+    <ClCompile Include="mysystem.c" />
+    <ClCompile Include="non_local_jump.c" />
+    <ClCompile Include="restart.c" />
+    <ClCompile Include="signal_demo.c" />
+    <ClCompile Include="signal_handle.c" />
+    <ClCompile Include="snooze.c" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="tfgets.c" />
+    <ClCompile Include="waitpid_by_order.c" />
+    <ClCompile Include="waitpid_random.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="myshell_job.h" />
+    <ClInclude Include="myshell_sighandler.h" />
     <ClInclude Include="第三章家庭作业.h" />
     <ClInclude Include="第二章家庭作业.h" />
     <ClInclude Include="第五章家庭作业.h" />
