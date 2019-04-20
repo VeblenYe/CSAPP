@@ -8,13 +8,14 @@
 #define STOPPING 0
 
 struct job {
-    int job;
-    pid_t pid;
-    int status;
-    int bg;
-    char *cmdline;
+    int job;	// 作业号
+    pid_t pid;	// 作业pid
+    int status;	// 作业状态
+    int bg;		// 作业是否为后台
+    char *cmdline;	// 作业名
 };
 
+// 作业集合
 struct job *joblist[MAXJOBS];
 
 void initjobs() {
@@ -31,6 +32,7 @@ int addjob(pid_t pid, char *cmdline, int bg) {
     int i;
     for (i = 0; i < MAXJOBS; ++i) {
         if (joblist[i] == NULL) {
+			// 注意要malloc两次
             joblist[i] = (struct job *)Malloc(sizeof(struct job));
             joblist[i]->pid = pid;
             joblist[i]->job = i;

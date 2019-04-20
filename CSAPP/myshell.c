@@ -13,6 +13,7 @@ int builtin_command(char **argv);
 int main() {
     char cmdline[MAXLINE];
 
+	// 设置自己的信号处理函数
     Signal(SIGINT, sigint_handler);
     Signal(SIGTSTP, sigtstp_handler);
     Signal(SIGCHLD, sigchld_handler);
@@ -43,12 +44,14 @@ void eval(char *cmdline) {
 
     if (!builtin_command(argv)) {
         // printf("non-builtin command\n");
+		// 同步流，阻塞所有信号，防止产生addjob和deletejob的竞争
         sigset_t mask, prev;
         Sigaddset(&mask, SIGCHLD);
         Sigprocmask(SIG_BLOCK, &mask, &prev);
 
         pid_t pid;
         if ((pid = Fork()) == 0) {
+			// 解除子进程中不需要的阻塞
             Sigprocmask(SIG_SETMASK, &prev, NULL);
             Signal(SIGINT, SIG_DFL);
             Signal(SIGTSTP, SIG_DFL);
@@ -59,6 +62,7 @@ void eval(char *cmdline) {
         }
         int job = addjob(pid, cmdline, bg);
         if (!bg) {
+			// 显式等待子进程退出
             Sigsuspend(&prev);
         } else {
             printf("[%d] %d %s\n", job, pid, cmdline);
